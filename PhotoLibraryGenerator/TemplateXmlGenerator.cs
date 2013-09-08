@@ -49,14 +49,7 @@ namespace PhotoLibraryGenerator
 				var xml = new XmlDocument();
 				xml.LoadXml(xmlText);
 
-				var templateNodes = TemplateXmlGenerator.Flatten(xml.ChildNodes).Where(
-					n => n.LocalName == TemplateXmlGenerator.imageName && n.NamespaceURI == TemplateXmlGenerator.NamespaceURI).ToArray();
-				
-				foreach (var templateNode in templateNodes)
-				{
-					TemplateXmlGenerator.ImplementTemplate(xml, templateNode, imageName, replacementStrings[imageName]);
-					templateNode.ParentNode.RemoveChild(templateNode);
-				}
+				TemplateXmlGenerator.ReplaceText(replacementStrings[imageName], TemplateXmlGenerator.Flatten(xml.ChildNodes));
 
 				TemplateXmlGenerator.ImplementTitle(xml, title);
 
@@ -89,27 +82,7 @@ namespace PhotoLibraryGenerator
 			var childNodes = new List<XmlNode>();
 			childNodes.AddRange(TemplateXmlGenerator.Flatten(newNode.ChildNodes));
 
-			foreach (var node in childNodes)
-			{
-				foreach (var kvp in strings)
-				{
-					var name = '[' + kvp.Key + ']';
-					var value = kvp.Value;
-
-					if (node is XmlText)
-					{
-						var textNode = (XmlText)node;
-						textNode.InnerText = textNode.InnerText.Replace(name, value);
-					}
-					else
-					{
-						foreach (XmlAttribute attribube in node.Attributes)
-						{
-							attribube.Value = attribube.Value.Replace(name, value);
-						}
-					}
-				}
-			}
+			TemplateXmlGenerator.ReplaceText(strings, childNodes);
 
 			newNode = xml.ImportNode(newNode, deep: true);
 			childNodes.Clear();
@@ -118,6 +91,31 @@ namespace PhotoLibraryGenerator
 			foreach (var childNode in childNodes)
 			{
 				templateNode.ParentNode.InsertBefore(childNode, templateNode);
+			}
+		}
+
+		static void ReplaceText(Dictionary<string, string> strings, IEnumerable<XmlNode> childNodes)
+		{
+			foreach (var node in childNodes) 
+			{
+				foreach (var kvp in strings) 
+				{
+					var name = '[' + kvp.Key + ']';
+					var value = kvp.Value;
+
+					if (node is XmlText) 
+					{
+						var textNode = (XmlText)node;
+						textNode.InnerText = textNode.InnerText.Replace (name, value);
+					}
+					else if (null != node.Attributes)
+					{
+						foreach (XmlAttribute attribube in node.Attributes)
+						{
+							attribube.Value = attribube.Value.Replace (name, value);
+						}
+					}
+				}
 			}
 		}
 

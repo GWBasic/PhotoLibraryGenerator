@@ -5,7 +5,7 @@
 	<size name="original" />
 	<template file="index.xhtml" />
 	<template file="thumbnails.xhtml" />
-	<!-- detail file="detail.xhtml" / -->
+	<detail file="image.xhtml" />
 	<copy file="download.png" />
 	<copy file="gallery.css" />
 </config>

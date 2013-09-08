@@ -51,5 +51,6 @@
     <None Include="thumbnails.xhtml" />
     <None Include="download.png" />
     <None Include="gallery.css" />
+    <None Include="image.xhtml" />
   </ItemGroup>
 </Project>
