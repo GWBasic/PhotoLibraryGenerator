@@ -1,0 +1,41 @@
+body {
+	background: #777777;
+	font-family: arial;
+}
+
+h1 {
+	text-align: center
+}
+
+.nav {
+	position: fixed;
+	margin: 10px auto;
+	padding: 10px;
+	background: white;
+}
+
+.image {
+	text-align: center;
+	margin: 10px auto;
+	padding: 10px;
+	background: white;
+}
+
+.date {
+	float: left
+}
+
+.download {
+	float: right
+}
+
+img.download {
+	vertical-align:text-top;
+}
+
+.thumbnails {
+	text-align: center;
+	margin: 10px auto;
+	padding: 10px;
+	background: white;
+}

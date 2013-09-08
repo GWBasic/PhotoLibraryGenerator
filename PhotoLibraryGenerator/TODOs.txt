@@ -1,0 +1,2 @@
+Slideshow page that uses the full-resolution images
+Detail page for each picture

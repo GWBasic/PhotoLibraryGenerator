@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:generator="generator">
+	<head>
+		<title><generator:title /></title>
+		<link rel="stylesheet" type="text/css" href="gallery.css" />
+	</head>
+	<body>
+		<div class="nav">
+			<generator:title />
+			<hr />
+			<a href="thumbnails.xhtml">Thumbnails</a>
+		</div>
+		<h1><generator:title /></h1>
+		<hr />
+		<generator:image>
+			<a name="[name]" />
+			<div class="image" style="width: [normal_width]px;">
+				<img src="[normal_image]" width="[normal_width]" height="[normal_height]" /><br />
+				<span class="date">[date_long], [time_long]</span>
+				<a href="[original_image]" download="[name]" class="download">
+					<img src="download.png" width="32" height="32" class="download" />Save original ([original_size])
+				</a>
+				<div style="clear: both;"></div>
+			</div>
+		</generator:image>
+	</body>
+</html>

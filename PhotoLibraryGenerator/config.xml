@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+	<size name="thumbnail" height="100" quality="50" />
+	<size name="normal" pixels="350000" quality="75" />
+	<size name="original" />
+	<template file="index.xhtml" />
+	<template file="thumbnails.xhtml" />
+	<!-- detail file="detail.xhtml" / -->
+	<copy file="download.png" />
+	<copy file="gallery.css" />
+</config>
