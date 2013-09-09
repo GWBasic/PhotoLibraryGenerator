@@ -1,1 +1,3 @@
 Slideshow page that uses the full-resolution images
+
+Override back and forward buttons

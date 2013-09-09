@@ -52,5 +52,8 @@
     <None Include="download.png" />
     <None Include="gallery.css" />
     <None Include="image.xhtml" />
+    <None Include="jquery-1.10.2.min.js" />
+    <None Include="slideshow.xhtml" />
+    <None Include="slideshow.js" />
   </ItemGroup>
 </Project>

@@ -39,3 +39,49 @@ img.download {
 	padding: 10px;
 	background: white;
 }
+
+.slideshow {
+	text-align: center;
+	background: black;
+	width: 100%;
+	height: 100%;
+	cursor: none;
+}
+
+.slideshownav {
+	height: 300px; 
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.slideshownavinner {
+	background: white;
+    width: 70%;
+    margin-left: auto;
+   	margin-right: auto;
+	padding: 10px;
+}
+
+.slideshowimage {
+	position: fixed;
+}
+
+#prevspan {
+	float: left;
+	font-size: 1.5em;
+}
+
+#nextspan {
+	float: right;
+	font-size: 1.5em;
+}
+
+#prevlink {
+	text-decoration:none;
+}
+
+#nextlink {
+	text-decoration:none;
+}
