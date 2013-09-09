@@ -19,7 +19,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Externalconsole>True</Externalconsole>
-    <Commandlineparameters>../../config.xml "//Users/andrewrondeau/Downloads/Wedding pictures" "/Users/andrewrondeau/Downloads/Generated" "Wedding Pictures"</Commandlineparameters>
+    <Commandlineparameters>../../config.xml "/Users/andrewrondeau/Pictures/2-08 Honeymoon" "/Users/andrewrondeau/Downloads/Honeymoon Pictures" "Andrew and Jevon's Honeymoon"</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>none</DebugType>
